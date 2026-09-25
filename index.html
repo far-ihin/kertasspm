@@ -3,195 +3,220 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>KertasSPM – SPM past year papers, every subject</title>
-<meta name="description" content="Free SPM past year papers and marking schemes for every subject. Pick a subject, pick a year, start practising.">
+<title>KertasSPM — Archives & Past Examination Papers</title>
+<meta name="description" content="A curated, minimal archive of SPM past year examination papers and marking schemes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #EEF1F6;
+    --bg: #F9F8F6;
     --paper: #FFFFFF;
-    --ink: #16213A;
-    --muted: #5B6478;
-    --line: #D5DAE5;
-    --graphite: #2B2F3A;
-    --pencil: #F5B700;
-    --mark: #C8102E;
-    --focus: #1F5FBF;
-    --font-head: "Bricolage Grotesque", "Trebuchet MS", "Segoe UI", sans-serif;
-    --font-body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --ink: #111111;
+    --muted: #767676;
+    --line: #E2E0DB;
+    --accent: #2C2C2C;
+    --highlight: #C2A675;
+    --mark: #9E2A2B;
+    --font-serif: "Italiana", serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
+
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0F1424; --paper: #171D33; --ink: #E8ECF6; --muted: #97A0B8;
-      --line: #2A3352; --graphite: #E8ECF6; --mark: #FF6B7F; --focus: #7FB0FF;
+      --bg: #121212; --paper: #1A1A1A; --ink: #F3F3F3; --muted: #8E8E8E;
+      --line: #2C2C2C; --accent: #E5E5E5; --highlight: #D4B98B; --mark: #E56B6F;
     }
   }
-  :root[data-theme="dark"] {
-    --bg: #0F1424; --paper: #171D33; --ink: #E8ECF6; --muted: #97A0B8;
-    --line: #2A3352; --graphite: #E8ECF6; --mark: #FF6B7F; --focus: #7FB0FF;
-  }
+
   html { scroll-padding-top: env(safe-area-inset-top, 0px); }
   *, *::before, *::after { box-sizing: border-box; }
+  
   body {
     margin: 0; background: var(--bg); color: var(--ink);
-    font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+    font-family: var(--font-sans); font-size: 15px; line-height: 1.6;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
   }
-  a { color: inherit; }
-  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
-  .wrap { width: 100%; max-width: 920px; margin: 0 auto; padding: 0 18px; }
 
-  /* Top bar */
-  .bar { display: flex; align-items: center; justify-content: space-between; padding: 18px 0 0; gap: 12px; }
-  .brand { font-family: var(--font-head); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; text-decoration: none; }
-  .brand b { background: var(--pencil); color: #16213A; padding: 0 6px; border-radius: 4px; margin-right: 2px; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .wrap { width: 100%; max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  /* Top Navigation */
+  .bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 32px 0 20px; border-bottom: 1px solid var(--line);
+  }
+  .brand {
+    font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400;
+    letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  .brand b { font-weight: 400; font-style: italic; color: var(--highlight); }
   .support-btn {
-    font: 600 0.875rem var(--font-body); text-decoration: none; padding: 8px 14px;
-    border: 2px solid var(--ink); border-radius: 999px; background: transparent; color: var(--ink);
+    font: 500 0.75rem var(--font-sans); text-transform: uppercase; letter-spacing: 0.12em;
+    padding: 10px 20px; border: 1px solid var(--ink); border-radius: 999px;
+    background: transparent; color: var(--ink); transition: all 0.3s ease;
   }
   .support-btn:hover { background: var(--ink); color: var(--bg); }
 
-  /* Hero */
-  .hero { padding: 44px 0 26px; }
+  /* Hero Banner */
+  .hero { padding: 60px 0 40px; text-align: center; }
   h1 {
-    font-family: var(--font-head); font-weight: 800; letter-spacing: -0.03em;
-    font-size: clamp(2.3rem, 9vw, 4.2rem); line-height: 0.98; margin: 0 0 14px; max-width: 12ch;
+    font-family: var(--font-serif); font-weight: 400; font-size: clamp(2.8rem, 7vw, 4.8rem);
+    line-height: 1.05; margin: 0 0 16px; letter-spacing: -0.01em;
   }
-  .hero p { margin: 0; color: var(--muted); max-width: 46ch; font-size: 1.05rem; }
+  .hero p {
+    margin: 0 auto; color: var(--muted); max-width: 52ch; font-size: 1.05rem;
+    font-weight: 300; letter-spacing: 0;
+  }
 
-  /* Controls */
-  .controls { background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 16px; }
+  /* Controls Section */
+  .controls {
+    background: var(--paper); border: 1px solid var(--line);
+    border-radius: 16px; padding: 24px; display: grid; gap: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  }
   .search { position: relative; }
   .search input {
-    width: 100%; font: 500 1rem var(--font-body); color: var(--ink); background: var(--bg);
-    border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px 12px 42px;
+    width: 100%; font: 400 0.95rem var(--font-sans); color: var(--ink); background: var(--bg);
+    border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 14px 46px;
+    transition: border-color 0.2s;
   }
-  .search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--muted); }
-  .tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+  .search input:focus { border-color: var(--ink); outline: none; }
+  .search svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+
+  .tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
   .tab {
-    flex: none; font: 600 0.875rem var(--font-body); padding: 8px 14px; border-radius: 999px;
-    border: 1.5px solid var(--line); background: transparent; color: var(--ink); cursor: pointer;
+    flex: none; font: 500 0.75rem var(--font-sans); text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 10px 18px; border-radius: 999px; border: 1px solid var(--line);
+    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.25s ease;
   }
   .tab[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-  .omr-label { font-size: 0.8rem; color: var(--muted); margin: 0 0 8px; }
-  .omr { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+
+  .omr-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0 0 10px; }
+  .omr { display: flex; gap: 8px; overflow-x: auto; }
   .omr button {
-    flex: 1 0 54px; display: grid; justify-items: center; gap: 6px; background: none; border: 0;
-    padding: 4px 2px; cursor: pointer; color: var(--ink); font: 600 0.8rem var(--font-body);
+    flex: 1 0 60px; display: flex; flex-direction: column; align-items: center; gap: 6px;
+    background: none; border: 0; padding: 6px 0; cursor: pointer; color: var(--ink);
+    font: 500 0.8rem var(--font-sans);
   }
   .omr i {
-    width: 26px; height: 34px; border: 2px solid var(--graphite); border-radius: 50%;
-    background: transparent; transition: background 0.15s;
+    width: 20px; height: 20px; border: 1px solid var(--muted); border-radius: 50%;
+    transition: all 0.2s ease;
   }
-  .omr button[aria-pressed="true"] i { background: var(--graphite); }
+  .omr button[aria-pressed="true"] i { background: var(--ink); border-color: var(--ink); transform: scale(1.1); }
 
-  /* Results */
-  .meta { display: flex; justify-content: space-between; align-items: baseline; margin: 26px 0 10px; gap: 10px; }
-  .meta h2 { font-family: var(--font-head); font-size: 1.35rem; margin: 0; letter-spacing: -0.01em; }
-  .meta span { color: var(--muted); font-size: 0.875rem; }
-  .list { display: grid; gap: 10px; }
-  details.subject { background: var(--paper); border: 1.5px solid var(--line); border-radius: 12px; }
+  /* Results Meta */
+  .meta { display: flex; justify-content: space-between; align-items: baseline; margin: 40px 0 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .meta h2 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; margin: 0; }
+  .meta span { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* Accordion Subject List */
+  .list { display: grid; gap: 12px; }
+  details.subject {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  details.subject[open] { border-color: var(--ink); box-shadow: 0 6px 24px rgba(0,0,0,0.03); }
   details.subject summary {
-    list-style: none; cursor: pointer; padding: 15px 16px; display: flex; align-items: center; gap: 12px;
+    list-style: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; gap: 16px;
   }
   details.subject summary::-webkit-details-marker { display: none; }
-  .sname { font-family: var(--font-head); font-weight: 600; font-size: 1.1rem; flex: 1; }
-  .sgroup { font-size: 0.8rem; color: var(--muted); }
-  .chev { width: 10px; height: 10px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform 0.2s; margin-right: 4px; }
+  .sname { font-family: var(--font-serif); font-weight: 400; font-size: 1.4rem; flex: 1; letter-spacing: 0.01em; }
+  .sgroup { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .chev { width: 8px; height: 8px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); transform: rotate(45deg); transition: transform 0.25s ease; }
   details[open] .chev { transform: rotate(225deg); }
-  .rows { padding: 0 16px 14px; border-top: 1px dashed var(--line); }
-  .row { display: grid; grid-template-columns: 3.6rem 1fr; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+
+  /* Year Rows */
+  .rows { padding: 0 24px 20px; border-top: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: 4rem 1fr; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px dashed var(--line); }
   .row:last-child { border-bottom: 0; }
-  .yr { font-family: var(--font-head); font-weight: 800; font-size: 1.05rem; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .yr { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
   .chip {
-    font: 600 0.85rem var(--font-body); text-decoration: none; padding: 6px 12px; border-radius: 8px;
-    border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+    font: 500 0.75rem var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 8px 16px; border-radius: 6px; border: 1px solid var(--ink); background: transparent; color: var(--ink);
+    transition: all 0.2s ease;
   }
-  a.chip:hover { background: var(--pencil); border-color: var(--pencil); color: #16213A; }
+  a.chip:hover { background: var(--ink); color: var(--paper); }
   a.chip.skema { border-color: var(--mark); color: var(--mark); }
-  a.chip.skema:hover { background: var(--mark); border-color: var(--mark); color: #fff; }
-  span.chip { border: 1.5px dashed var(--line); color: var(--muted); font-weight: 500; }
+  a.chip.skema:hover { background: var(--mark); color: #FFF; }
+  span.chip { border: 1px dashed var(--line); color: var(--muted); opacity: 0.6; }
 
-  .empty { background: var(--paper); border: 1.5px dashed var(--line); border-radius: 12px; padding: 26px; text-align: center; color: var(--muted); }
+  .notice { margin-top: 16px; background: #FAF3E0; color: #5C4314; border-radius: 10px; padding: 14px 18px; font-size: 0.85rem; }
 
-  .ad { min-height: 100px; background: var(--paper); border: 1.5px dashed var(--line); border-radius: 12px; padding: 8px; text-align: center; overflow: hidden; }
-  .ad small { display: block; color: var(--muted); font-size: 0.7rem; margin-bottom: 4px; }
+  .support {
+    margin: 60px 0 0; background: var(--paper); border: 1px solid var(--line);
+    border-radius: 16px; padding: 36px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .support h3 { font-family: var(--font-serif); margin: 0; font-size: 2rem; font-weight: 400; }
+  .support p { margin: 0; color: var(--muted); max-width: 48ch; font-size: 0.95rem; }
+  .support a { background: var(--ink); color: var(--paper); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 12px 28px; border-radius: 999px; transition: opacity 0.2s; }
+  .support a:hover { opacity: 0.85; }
 
-  .notice { margin-top: 12px; background: #FFF6D6; color: #4A3B00; border-radius: 10px; padding: 12px 14px; font-size: 0.875rem; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .notice { background: #3A3210; color: #FFE9A0; } }
-  :root[data-theme="dark"] .notice { background: #3A3210; color: #FFE9A0; }
-  .notice code { font-size: 0.8rem; }
-
-  .support { margin: 30px 0 0; background: var(--ink); color: var(--paper); border-radius: 14px; padding: 22px; display: grid; gap: 10px; }
-  .support h3 { font-family: var(--font-head); margin: 0; font-size: 1.3rem; }
-  .support p { margin: 0; opacity: 0.85; max-width: 52ch; }
-  .support a { justify-self: start; background: var(--pencil); color: #16213A; text-decoration: none; font-weight: 600; padding: 10px 16px; border-radius: 999px; }
-
-  footer { padding: 34px 0 40px; color: var(--muted); font-size: 0.8rem; }
-  footer p { margin: 0 0 8px; max-width: 70ch; }
+  footer { padding: 48px 0; color: var(--muted); font-size: 0.75rem; text-align: center; border-top: 1px solid var(--line); margin-top: 60px; }
+  footer p { margin: 0 0 8px; }
 
   @media (min-width: 720px) {
-    .controls { grid-template-columns: 1fr; padding: 20px; }
+    .controls { padding: 32px; }
     .row { grid-template-columns: 5rem 1fr; }
   }
-  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="bar">
     <a class="brand" href="#"><b>Kertas</b>SPM</a>
-    <a class="support-btn" id="topSupport" href="#" hidden target="_blank" rel="noopener">Support this site</a>
+    <a class="support-btn" id="topSupport" href="#" hidden target="_blank" rel="noopener">Support Archive</a>
   </div>
 
   <section class="hero">
-    <h1>SPM past year papers.</h1>
-    <p>Every subject, every year. Pick a subject, pick a year, then download the paper and its marking scheme.</p>
+    <h1>SPM Past Papers Archive</h1>
+    <p>A minimalist library of Malaysian SPM past year examination papers and official marking schemes.</p>
   </section>
 
   <section class="controls" aria-label="Find papers">
     <label class="search">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Search subject, e.g. Matematik Tambahan" autocomplete="off" aria-label="Search subjects">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search subject (e.g. Bahasa Melayu, Matematik)" autocomplete="off" aria-label="Search subjects">
     </label>
     <div class="tabs" id="tabs" role="group" aria-label="Subject group"></div>
     <div>
-      <p class="omr-label">Fill in the year</p>
+      <p class="omr-label">Filter by examination year</p>
       <div class="omr" id="omr" role="group" aria-label="Exam year"></div>
     </div>
   </section>
 
   <div class="notice" id="notice" hidden>
-    <strong>Owner note:</strong> no paper links yet. Add your PDF links to the <code>LINKS</code> object in the page code, for example <code>'matematik|2023|K1': 'https://…/paper.pdf'</code>. Buttons switch on automatically. Delete this note once done.
+    <strong>Owner note:</strong> no paper links added yet. Update the <code>LINKS</code> object in the code with your Google Drive links[cite: 1].
   </div>
 
-  <div class="meta"><h2 id="count">All subjects</h2><span id="sub"></span></div>
+  <div class="meta"><h2 id="count">All Subjects</h2><span id="sub"></span></div>
   <div class="list" id="list"></div>
 
   <section class="support" id="support" hidden>
-    <h3>Keep it free for every student</h3>
-    <p>This site is free and stays free. If it helped your revision, a small tip covers hosting and lets more papers go up.</p>
-    <a id="supportLink" href="#" target="_blank" rel="noopener">Support</a>
+    <h3>Keep This Archive Open</h3>
+    <p>KertasSPM is an open-access repository. A small contribution helps maintain hosting and keeps learning materials free for all students.</p>
+    <a id="supportLink" href="#" target="_blank" rel="noopener">Support Project</a>
   </section>
 
   <footer>
-    <p>SPM examination papers are the property of Lembaga Peperiksaan, Kementerian Pendidikan Malaysia, and their respective publishers. Papers are provided for revision purposes only.</p>
+    <p>SPM examination materials are property of Lembaga Peperiksaan, Kementerian Pendidikan Malaysia.</p>
     <p id="contact"></p>
   </footer>
 </div>
 
 <script>
-/* ============ EDIT THIS SECTION ============ */
+/* ============ CONFIG & LINKS ============ */
 const CONFIG = {
-  years: [2025, 2024, 2023, 2022, 2021], // 👈 Added 2025
-  supportUrl: '',
-  supportLabel: 'Buy me a teh tarik',
-  contactEmail: '',
+  years: [2025, 2024, 2023, 2022, 2021],
+  supportUrl: '',                     // 👈 Add your donation link here
+  supportLabel: 'Support Archive',
+  contactEmail: '',                   // 👈 Add your contact email here
   adsEnabled: false,
   adsClient: 'ca-pub-XXXXXXXXXXXXXXXX',
   adsSlot: '0000000000'
@@ -199,12 +224,12 @@ const CONFIG = {
 
 /* Key format: 'subject-id|year|paper'. Paper = K1, K2, K3 or Skema. */
 const LINKS = {
-  'matematik|2022|K1': 'https://drive.google.com/file/d/1DuBm0DwfPf_z4DyG6ASnsmwM8T0zj-D1/view?usp=sharing',
-  'matematik|2022|K2': 'https://drive.google.com/file/d/1DuBm0DwfPf_z4DyG6ASnsmwM8T0zj-D1/view?usp=sharing',
-  'matematik|2022|Skema': 'https://drive.google.com/file/d/1rRlBX-pMhlAPJzG77ITFa0pnTtX1cuF-/view?usp=sharing',
   'matematik|2021|K1': 'https://drive.google.com/file/d/1eR9iCGXWUpL1q04_qsneFsWRsEmhHwH6/view?usp=sharing',
   'matematik|2021|K2': 'https://drive.google.com/file/d/1H520aULRHJVMaQX51cxosPAsy7w6jvhF/view?usp=sharing',
   'matematik|2021|Skema': 'https://drive.google.com/file/d/1lfDOHYHqa5foPql5rfLXE6XoIIr7Gh19/view?usp=sharing',
+  'matematik|2022|K1': 'https://drive.google.com/file/d/1DuBm0DwfPf_z4DyG6ASnsmwM8T0zj-D1/view?usp=sharing',
+  'matematik|2022|K2': 'https://drive.google.com/file/d/1DuBm0DwfPf_z4DyG6ASnsmwM8T0zj-D1/view?usp=sharing',
+  'matematik|2022|Skema': 'https://drive.google.com/file/d/1rRlBX-pMhlAPJzG77ITFa0pnTtX1cuF-/view?usp=sharing',
   'matematik|2023|K1': 'https://drive.google.com/file/d/1mPhaK1M5GOJzCZ57ChN_8DnWq1WJiAiG/view?usp=sharing',
   'matematik|2023|K2': 'https://drive.google.com/file/d/1mCxqmS3DORivrhKX4FoGjx9gjVOF71Zm/view?usp=sharing',
   'matematik|2023|Skema': 'https://drive.google.com/file/d/1kLMTdZEW-0Odn7tuOZND469eJsVh4X_8/view?usp=sharing',
@@ -217,14 +242,12 @@ const LINKS = {
   'bm|2021|K1': 'https://drive.google.com/file/d/1C5LytGC-36oPH8gV3ohG5oez9vRr9St6/view?usp=sharing',
   'bm|2021|K2': 'https://drive.google.com/file/d/1afSyROjOPZX3-YB6b446rC0WXthCMlwK/view?usp=sharing',
   'bm|2021|Skema': 'https://drive.google.com/file/d/1wUvVidTGUsOMEEycnIR-9ojmYONbHd01/view?usp=sharing',
-  'bm|2022|K2': 'https://drive.google.com/file/d/1qaQLVcQQnuEOqs_a-wD4Ikdp1zYnnGgS/view?usp=sharing',
   'bm|2022|K1': 'https://drive.google.com/file/d/1UGGZwU0d8iJ2sj8Cij3a4xmJK3MTpeAC/view?usp=sharing',
+  'bm|2022|K2': 'https://drive.google.com/file/d/1qaQLVcQQnuEOqs_a-wD4Ikdp1zYnnGgS/view?usp=sharing',
   'bm|2022|Skema': 'https://drive.google.com/file/d/1Qi7nkxgdy7LWebP0aCvihUogal1Rof84/view?usp=sharing',
   'bm|2023|K1': 'https://drive.google.com/file/d/1baV-3INMHRePUmZU417T_Ho5n2deHMhr/view?usp=sharing',
   'bm|2023|K2': 'https://drive.google.com/file/d/1jLIAUXg9x6Gg2bHdgTJcSmPIw3cqukim/view?usp=sharing',
   'bm|2023|Skema': 'https://drive.google.com/file/d/1SESI-vCxWWOynwLBU8J4F3Snoqiiey51/view?usp=sharing'
-  // When you get 2025 papers, add them like this:
-  // 'matematik|2025|K1': 'https://drive.google.com/...',
 };
 /* ============================================ */
 
@@ -300,15 +323,15 @@ function render() {
     (!q || s.name.toLowerCase().includes(q) || s.id.includes(q))
   );
 
-  $('count').textContent = state.group === 'All' ? 'All subjects' : state.group;
+  $('count').textContent = state.group === 'All' ? 'All Subjects' : state.group;
   $('sub').textContent = shown.length + (shown.length === 1 ? ' subject' : ' subjects') + (state.year ? ' · SPM ' + state.year : '');
 
   if (!shown.length) {
-    list.appendChild(el('div', 'empty', 'No subject matches that search. Try a shorter name, like "sains" or "arab".'));
+    list.appendChild(el('div', 'empty', 'No subjects match your query.'));
     return;
   }
   const autoOpen = !!q || !!state.year || shown.length <= 4;
-  shown.forEach((s, i) => {
+  shown.forEach((s) => {
     const d = el('details', 'subject'); if (autoOpen) d.open = true;
     const sum = el('summary');
     sum.append(el('span', 'sname', s.name), el('span', 'sgroup', s.group), el('span', 'chev'));
@@ -322,38 +345,17 @@ function render() {
       r.appendChild(c); rows.appendChild(r);
     });
     d.appendChild(rows); list.appendChild(d);
-
-    if (CONFIG.adsEnabled && i === 2 && shown.length > 3) list.appendChild(adSlot());
   });
 }
 
-function adSlot() {
-  const a = el('aside', 'ad'); a.setAttribute('aria-label', 'Advertisement');
-  a.appendChild(el('small', null, 'Advertisement'));
-  const ins = document.createElement('ins');
-  ins.className = 'adsbygoogle'; ins.style.display = 'block';
-  ins.setAttribute('data-ad-client', CONFIG.adsClient);
-  ins.setAttribute('data-ad-slot', CONFIG.adsSlot);
-  ins.setAttribute('data-ad-format', 'auto');
-  ins.setAttribute('data-full-width-responsive', 'true');
-  a.appendChild(ins);
-  try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
-  return a;
-}
-
 function init() {
-  if (CONFIG.adsEnabled) {
-    const sc = document.createElement('script'); sc.async = true; sc.crossOrigin = 'anonymous';
-    sc.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + CONFIG.adsClient;
-    document.head.appendChild(sc);
-  }
   if (CONFIG.supportUrl) {
     ['topSupport', 'supportLink'].forEach(id => { $(id).href = CONFIG.supportUrl; });
     $('topSupport').textContent = CONFIG.supportLabel; $('topSupport').hidden = false;
     $('support').hidden = false;
   }
   if (CONFIG.contactEmail) {
-    const p = $('contact'); p.append('Request a paper or report a problem: ');
+    const p = $('contact'); p.append('Inquiries & Paper Requests: ');
     const a = el('a', null, CONFIG.contactEmail); a.href = 'mailto:' + CONFIG.contactEmail; p.appendChild(a);
   }
   if (!Object.keys(LINKS).length) $('notice').hidden = false;
