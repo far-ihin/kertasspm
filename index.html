@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>KertasSPM — Archives & Past Examination Papers</title>
 <meta name="description" content="A curated, minimal archive of SPM past year examination papers and marking schemes.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #F9F8F6;
@@ -16,10 +13,9 @@
     --muted: #767676;
     --line: #E2E0DB;
     --accent: #2C2C2C;
-    --highlight: #C2A675;
+    --highlight: #8C7355;
     --mark: #9E2A2B;
-    --font-serif: "Italiana", serif;
-    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -37,8 +33,8 @@
   
   body {
     margin: 0; background: var(--bg); color: var(--ink);
-    font-family: var(--font-sans); font-size: 15px; line-height: 1.6;
-    letter-spacing: -0.01em;
+    font-family: var(--font-helvetica); font-size: 15px; line-height: 1.6;
+    letter-spacing: -0.02em;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -52,12 +48,12 @@
     padding: 32px 0 20px; border-bottom: 1px solid var(--line);
   }
   .brand {
-    font-family: var(--font-serif); font-size: 1.75rem; font-weight: 400;
-    letter-spacing: 0.02em; text-transform: uppercase;
+    font-family: var(--font-helvetica); font-size: 1.5rem; font-weight: 700;
+    letter-spacing: -0.03em; text-transform: uppercase;
   }
-  .brand b { font-weight: 400; font-style: italic; color: var(--highlight); }
+  .brand b { font-weight: 300; color: var(--highlight); }
   .support-btn {
-    font: 500 0.75rem var(--font-sans); text-transform: uppercase; letter-spacing: 0.12em;
+    font: 600 0.75rem var(--font-helvetica); text-transform: uppercase; letter-spacing: 0.08em;
     padding: 10px 20px; border: 1px solid var(--ink); border-radius: 999px;
     background: transparent; color: var(--ink); transition: all 0.3s ease;
   }
@@ -66,12 +62,12 @@
   /* Hero Banner */
   .hero { padding: 60px 0 40px; text-align: center; }
   h1 {
-    font-family: var(--font-serif); font-weight: 400; font-size: clamp(2.8rem, 7vw, 4.8rem);
-    line-height: 1.05; margin: 0 0 16px; letter-spacing: -0.01em;
+    font-family: var(--font-helvetica); font-weight: 700; font-size: clamp(2.5rem, 6vw, 4.2rem);
+    line-height: 1.05; margin: 0 0 16px; letter-spacing: -0.04em;
   }
   .hero p {
     margin: 0 auto; color: var(--muted); max-width: 52ch; font-size: 1.05rem;
-    font-weight: 300; letter-spacing: 0;
+    font-weight: 400; letter-spacing: -0.01em;
   }
 
   /* Controls Section */
@@ -82,7 +78,7 @@
   }
   .search { position: relative; }
   .search input {
-    width: 100%; font: 400 0.95rem var(--font-sans); color: var(--ink); background: var(--bg);
+    width: 100%; font: 400 0.95rem var(--font-helvetica); color: var(--ink); background: var(--bg);
     border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 14px 46px;
     transition: border-color 0.2s;
   }
@@ -91,18 +87,18 @@
 
   .tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
   .tab {
-    flex: none; font: 500 0.75rem var(--font-sans); text-transform: uppercase; letter-spacing: 0.08em;
+    flex: none; font: 600 0.75rem var(--font-helvetica); text-transform: uppercase; letter-spacing: 0.05em;
     padding: 10px 18px; border-radius: 999px; border: 1px solid var(--line);
     background: transparent; color: var(--muted); cursor: pointer; transition: all 0.25s ease;
   }
   .tab[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-  .omr-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0 0 10px; }
+  .omr-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 10px; }
   .omr { display: flex; gap: 8px; overflow-x: auto; }
   .omr button {
     flex: 1 0 60px; display: flex; flex-direction: column; align-items: center; gap: 6px;
     background: none; border: 0; padding: 6px 0; cursor: pointer; color: var(--ink);
-    font: 500 0.8rem var(--font-sans);
+    font: 600 0.8rem var(--font-helvetica);
   }
   .omr i {
     width: 20px; height: 20px; border: 1px solid var(--muted); border-radius: 50%;
@@ -112,8 +108,8 @@
 
   /* Results Meta */
   .meta { display: flex; justify-content: space-between; align-items: baseline; margin: 40px 0 16px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
-  .meta h2 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; margin: 0; }
-  .meta span { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  .meta h2 { font-family: var(--font-helvetica); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.03em; margin: 0; }
+  .meta span { color: var(--muted); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
 
   /* Accordion Subject List */
   .list { display: grid; gap: 12px; }
@@ -126,19 +122,19 @@
     list-style: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; gap: 16px;
   }
   details.subject summary::-webkit-details-marker { display: none; }
-  .sname { font-family: var(--font-serif); font-weight: 400; font-size: 1.4rem; flex: 1; letter-spacing: 0.01em; }
-  .sgroup { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
-  .chev { width: 8px; height: 8px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); transform: rotate(45deg); transition: transform 0.25s ease; }
+  .sname { font-family: var(--font-helvetica); font-weight: 700; font-size: 1.25rem; flex: 1; letter-spacing: -0.02em; }
+  .sgroup { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .chev { width: 8px; height: 8px; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg); transition: transform 0.25s ease; }
   details[open] .chev { transform: rotate(225deg); }
 
   /* Year Rows */
   .rows { padding: 0 24px 20px; border-top: 1px solid var(--line); }
   .row { display: grid; grid-template-columns: 4rem 1fr; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px dashed var(--line); }
   .row:last-child { border-bottom: 0; }
-  .yr { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+  .yr { font-family: var(--font-helvetica); font-weight: 700; font-size: 0.95rem; color: var(--ink); }
   .chips { display: flex; flex-wrap: wrap; gap: 10px; }
   .chip {
-    font: 500 0.75rem var(--font-sans); text-transform: uppercase; letter-spacing: 0.05em;
+    font: 600 0.75rem var(--font-helvetica); text-transform: uppercase; letter-spacing: 0.05em;
     padding: 8px 16px; border-radius: 6px; border: 1px solid var(--ink); background: transparent; color: var(--ink);
     transition: all 0.2s ease;
   }
@@ -153,9 +149,9 @@
     margin: 60px 0 0; background: var(--paper); border: 1px solid var(--line);
     border-radius: 16px; padding: 36px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px;
   }
-  .support h3 { font-family: var(--font-serif); margin: 0; font-size: 2rem; font-weight: 400; }
+  .support h3 { font-family: var(--font-helvetica); margin: 0; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.03em; }
   .support p { margin: 0; color: var(--muted); max-width: 48ch; font-size: 0.95rem; }
-  .support a { background: var(--ink); color: var(--paper); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 12px 28px; border-radius: 999px; transition: opacity 0.2s; }
+  .support a { background: var(--ink); color: var(--paper); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 12px 28px; border-radius: 999px; transition: opacity 0.2s; }
   .support a:hover { opacity: 0.85; }
 
   footer { padding: 48px 0; color: var(--muted); font-size: 0.75rem; text-align: center; border-top: 1px solid var(--line); margin-top: 60px; }
